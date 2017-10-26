@@ -36,13 +36,16 @@
 		<div class="website-navigation">
 			<?php wp_nav_menu(array('theme_location'=>'primary')); ?>
 		</div>
+		<div class="website-search-bar">
+			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+				<label>
+				<input type="search" class="search-field"
+				placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+				value="<?php echo get_search_query() ?>" name="s"
+				title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+				</label>
+				<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+			</form>
+		</div>
 	</header>
-	<!-- Adding in the header image -->
-	<!-- <div id="header-image">
-		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="100%">
-	</div> -->
 	<div class="container">
-		<?php if(display_header_text()==true): ?>
-			<h1 style="color:#<?php header_textcolor(); ?>"><?php bloginfo('name'); ?></h1>
-			<h3><?php bloginfo('description') ?></h3>
-		<?php endif ?>

@@ -22,8 +22,10 @@ function RadioNewZealandSetUp(){
 
 	//  Primary Navigation (Header)
 	register_nav_menu('primary', 'This is the main navigation, positioned at the top of the page');
-	//  Secondary Navigation (Footer)
-	register_nav_menu('secondary', 'This is the secondary navigation, positioned at the Footer of the page');
+	//  Secondary Menu (Main Container)
+	register_nav_menu('secondary', 'This is the secondary navigation, positioned at the top of the page under the main navigation');
+	//  Extra Navigation (Footer)
+	register_nav_menu('extra', 'This is the navigation, positioned at the Footer of the page');
 }
 //  Adding the action to WordPress
 add_action('init', 'RadioNewZealandSetUp');
